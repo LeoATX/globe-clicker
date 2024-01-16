@@ -38,18 +38,20 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-        child: Center(
-      child: Column(
-        children: [
-          Text('${counter.toString()} kg of co2'),
-          const SizedBox(height: 20),
-          CupertinoButton(
-            color: CupertinoColors.activeBlue,
-            onPressed: changeCounter,
-            child: const Icon(CupertinoIcons.minus),
-          ),
-        ],
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('${counter.toString()} kg of co2'),
+            const SizedBox(height: 20),
+            CupertinoButton(
+              color: CupertinoColors.activeBlue,
+              onPressed: changeCounter,
+              child: const Icon(CupertinoIcons.minus),
+            ),
+          ],
+        ),
       ),
-    ));
+    );
   }
 }
