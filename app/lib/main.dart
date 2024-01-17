@@ -35,22 +35,22 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void changeCounter() {
     setState(() {
-      counter--;
+      counter = counter - 31;
     });
   }
 
   @override
   void initState() {
+    super.initState();
+
     Timer.periodic(
-      const Duration(seconds: 1),
+      const Duration(milliseconds: 500),
       (timer) {
         setState(() {
           counter += Random().nextInt(25) + 1;
         });
       },
     );
-
-    super.initState();
   }
 
   @override
