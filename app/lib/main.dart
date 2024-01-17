@@ -42,12 +42,17 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Text(counter.toString(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  counter.toString(),
                   style: const TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 36)),
-              const Text(' kg of CO2', style: TextStyle(fontSize: 20)),
-            ]),
+                      fontWeight: FontWeight.bold, fontSize: 36),
+                ),
+                const Text(' kg of CO2', style: TextStyle(fontSize: 20)),
+              ],
+            ),
             const SizedBox(height: 20),
             CupertinoButton(
               onPressed: changeCounter,
