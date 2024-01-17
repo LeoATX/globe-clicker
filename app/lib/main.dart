@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
-import 'game.dart';
+import 'home.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class App extends StatelessWidget {
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,24 +16,7 @@ class MyApp extends StatelessWidget {
       theme: CupertinoThemeData(
         primaryColor: CupertinoColors.white,
       ),
-      home: MyHomePage(),
+      home: HomePage(),
     );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return PageView(scrollDirection: Axis.vertical, children: const [
-      GamePage(),
-      Center(child: Text('Shop baby--capitalism W')),
-    ]);
   }
 }
